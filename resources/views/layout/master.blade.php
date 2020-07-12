@@ -7,9 +7,9 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
 <head>
         <meta charset="utf-8">
-        <title>Blood Buddies - Blood Donation Campaign & Multi-Concept Activism Template</title>
+        <title>Emergency Blood Hub - @yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Reddrop Buddies - Blood Donation Campaign & Multi-Concept Activism Template">
+        <meta name="description" content="Emergency Blood Hub for blood donation">
         <meta name="author" content="xenioushk">
         <link rel="shortcut icon" href="images/favicon.png" />
 
@@ -19,12 +19,12 @@
         <![endif]-->
 
         <!-- The styles -->
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" >
-        <link href="css/animate.css" rel="stylesheet" type="text/css" >
-        <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" >
-        <link href="css/venobox.css" rel="stylesheet" type="text/css" >
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+        <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" >
+        <link href="{{ asset('css/animate.css') }}" rel="stylesheet" type="text/css" >
+        <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet" type="text/css" >
+        <link href="{{ asset('css/venobox.css') }}" rel="stylesheet" type="text/css" >
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
 
     <body> 
 
@@ -1113,19 +1113,16 @@
 
         <a id="backTop">Back To Top</a>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.backTop.min.js"></script>
-        <script src="js/waypoints.min.js"></script>
-        <script src="js/waypoints-sticky.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/jquery.counterup.min.js"></script>
-        <script src="js/venobox.min.js"></script>
-        <script src="js/custom-scripts.js"></script>
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/wow.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.backTop.min.js') }}"></script>
+        <script src="{{ asset('js/waypoints.min.js') }}"></script>
+        <script src="{{ asset('js/waypoints-sticky.min.js') }}"></script>
+        <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+        <script src="{{ asset('js/venobox.min.js') }}"></script>
+        <script src="{{ asset('js/custom-scripts.js') }}"></script>
     </body>
-
-
-<!-- Mirrored from templates.bwlthemes.com/blood_donation/v_2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Jul 2020 19:52:46 GMT -->
 </html>
