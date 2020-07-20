@@ -6,8 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class BloodType extends Model
 {
-    public function donor()
+    public function community()
     {
-        return $this->belongsTo('App\Donor');
+        return $this->hasOneThrough(
+            Community::class,
+            Donor::class,
+            'blood_type_id',
+            'id',
+            'id'
+        );
     }
 }

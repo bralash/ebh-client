@@ -839,6 +839,8 @@ a.btn-load-more:hover {
 .logo {
   margin-top: 32px;
   margin-bottom: 0;
+  position: relative;
+  width: 100px;
 }
 .header-container {
   border-bottom: 0px solid #EEEEEE;

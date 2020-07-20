@@ -5,11 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Donor;
 use App\BloodType;
+use App\Community;
+use App\BloodRequest;
+use App\Donation;
 
 class PagesController extends Controller
 {
     public function index() {
-        return view('index');
+        $community = count(Community::all());
+        $donors = count(Donor::all());
+        $blood_requests = count(BloodRequest::all());
+        $donations = count(Donation::all());
+        return view('index', 
+        [
+            'com_count' => $community, 
+            'donors' => $donors, 
+            'blood_requests' => $blood_requests,
+            'donations' => $donations
+        ]);
     }
 
     public function donate() {
@@ -17,8 +30,13 @@ class PagesController extends Controller
         return response()->json($donor, 200);
     }
 
-    public function blood($type) {
-        $donor = BloodType::where('name', $type)->donor;
-        return response()->json($donor, 200);
+    public function blood() {
+        // $donor = BloodType::orderBy('id')->donor;
+        // return response()->json($donor, 200);
+
+        $blood = BloodType::find(3);
+        $blood_one = $blood->community->get();
+        return response()->json($blood_one, 200);
     }
+
 }

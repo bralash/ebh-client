@@ -13,4 +13,4 @@
 
 Route::get('/', 'PagesController@index');
 Route::get('donor', 'PagesController@donate');
-Route::get('/blood/{type}', 'PagesController@blood');
+Route::get('blood', 'PagesController@blood');
