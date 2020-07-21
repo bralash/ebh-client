@@ -11,13 +11,8 @@
                     <div class="col-sm-12 text-center">
 
                         <h3>
-                            Campaign Lists
+                            Blood Drives
                         </h3>
-
-                        <p class="page-breadcrumb">
-                            <a href="#">Home</a> / All Campaigns
-                        </p>
-
 
                     </div>
 
@@ -44,94 +39,35 @@
                     </div> <!-- end .col-sm-12  -->                       
 
                 </div> <!-- end .row  -->
+
+                @foreach ($blood_drive->chunk(2) as $chunk)
+                    <div class="row margin-top-48">
+                        @foreach ($chunk as $drive)
+                            <div class="col-md-6 col-sm-12">
+                                <div class="event-layout-1 theme-custom-box-shadow clearfix"> 
+                                    <figure class="event-img">
+                                        <a href="#">
+                                            <img src="images/event_1.jpg" alt="">
+                                        </a>
+                                    </figure>
+                                    <div class="event-info"> 
+                                        <a class="event-date" href="#"><i class="fa fa-calendar-o"></i> {{date('d-m-Y', strtotime($drive->scheduled_at))}}</a>
+                                        <h4>
+                                            <a href="#">{{$drive->event_name}}</a>
+                                        </h4>
+                                        <div class="event-exceprt">Lorem ipsum dolor sit amet turadipi scing elit lobort issim consecte dign pharetra mauris.</div>
+                                        <div class="event-time">
+                                            <a href="#"><i class="fa fa-clock-o"></i> 10.00 - 3.00</a>
+                                            <a href="#"> <i class="fa fa-map-marker"></i> {{$drive->community->name}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                @endforeach
                 
-                <div class="row margin-top-48">
-
-                        <div class="col-md-6 col-sm-12">
-                            <div class="event-layout-1 theme-custom-box-shadow clearfix"> 
-                                <figure class="event-img">
-                                    <a href="#">
-                                        <img src="images/event_1.jpg" alt="">
-                                    </a>
-                                </figure>
-                                <div class="event-info"> 
-                                    <a class="event-date" href="#"><i class="fa fa-calendar-o"></i> 14 January, 2018</a>
-                                    <h4>
-                                        <a href="#">Opening Donation Day</a>
-                                    </h4>
-                                    <div class="event-exceprt">Lorem ipsum dolor sit amet turadipi scing elit lobort issim consecte dign pharetra mauris.</div>
-                                    <div class="event-time">
-                                        <a href="#"><i class="fa fa-clock-o"></i> 10.00 - 3.00</a>
-                                        <a href="#"> <i class="fa fa-map-marker"></i> California, USA</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-sm-12">
-                            <div class="event-layout-1 theme-custom-box-shadow clearfix"> 
-                                <figure class="event-img">
-                                    <a href="#">
-                                        <img src="images/event_3.jpg" alt="">
-                                    </a>
-                                </figure>
-                                <div class="event-info"> 
-                                    <a class="event-date" href="#"><i class="fa fa-calendar-o"></i> 14 January, 2018</a>
-                                    <h4>
-                                        <a href="#">Free Group Checking</a>
-                                    </h4>
-                                    <div class="event-exceprt">Lorem ipsum dolor sit amet turadipi scing elit lobort issim consecte dign pharetra mauris.</div>
-                                    <div class="event-time">
-                                        <a href="#"><i class="fa fa-clock-o"></i> 10.00 - 3.00</a>
-                                        <a href="#"> <i class="fa fa-map-marker"></i> California, USA</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-sm-12">
-                            <div class="event-layout-1 theme-custom-box-shadow clearfix"> 
-                                <figure class="event-img">
-                                    <a href="#">
-                                        <img src="images/event_4.jpg" alt="">
-                                    </a>
-                                </figure>
-                                <div class="event-info"> 
-                                    <a class="event-date" href="#"><i class="fa fa-calendar-o"></i> 14 January, 2018</a>
-                                    <h4>
-                                        <a href="#">Blood Group Collection</a>
-                                    </h4>
-                                    <div class="event-exceprt">Lorem ipsum dolor sit amet turadipi scing elit lobort issim consecte dign pharetra mauris.</div>
-                                    <div class="event-time">
-                                        <a href="#"><i class="fa fa-clock-o"></i> 10.00 - 3.00</a>
-                                        <a href="#"> <i class="fa fa-map-marker"></i> California, USA</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-sm-12">
-                            <div class="event-layout-1 theme-custom-box-shadow clearfix"> 
-                                <figure class="event-img">
-                                    <a href="#">
-                                        <img src="images/event_2.jpg" alt="">
-                                    </a>
-                                </figure>
-                                <div class="event-info"> 
-                                    <a class="event-date" href="#"><i class="fa fa-calendar-o"></i> 14 January, 2018</a>
-                                    <h4>
-                                        <a href="#">Blood Donation Camp</a>
-                                    </h4>
-                                    <div class="event-exceprt">Lorem ipsum dolor sit amet turadipi scing elit lobort issim consecte dign pharetra mauris.</div>
-                                    <div class="event-time">
-                                        <a href="#"><i class="fa fa-clock-o"></i> 10.00 - 3.00</a>
-                                        <a href="#"> <i class="fa fa-map-marker"></i> California, USA</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-   
-                </div>
+                
 
             </div> <!--  end .container  --> 
 
