@@ -8,6 +8,7 @@ use App\BloodType;
 use App\Community;
 use App\BloodRequest;
 use App\Donation;
+use App\BloodDrive;
 
 class PagesController extends Controller
 {
@@ -37,6 +38,11 @@ class PagesController extends Controller
         $blood = BloodType::find(3);
         $blood_one = $blood->community->get();
         return response()->json($blood_one, 200);
+    }
+
+    public function bloodDrive() {
+        $blood_drive = BloodDrive::orderBy('id')->get();
+        return response()->json($blood_drive, 200);
     }
 
 }
