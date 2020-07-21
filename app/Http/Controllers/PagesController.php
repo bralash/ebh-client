@@ -41,8 +41,9 @@ class PagesController extends Controller
     }
 
     public function bloodDrive() {
-        $blood_drive = BloodDrive::orderBy('id')->get();
-        return response()->json($blood_drive, 200);
+        // $blood_drive = BloodDrive::orderBy('id')->get();
+        // return response()->json($blood_drive, 200);
+        return view('blood-drive');
     }
 
 }
