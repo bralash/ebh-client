@@ -198,7 +198,7 @@
                                     <small>All over the world we have arranged total sixty thousands donation campaign 
                                         and visit thousands of other venues on various occasions. </small>
                                 </h4>
-                            <a class="btn btn-theme margin-top-32" href="{{URL::to('blood-drive')}}">Load All Campaigns</a>
+                            <a class="btn btn-theme margin-top-32" href="{{URL::to('blood-drive')}}">Load All Blood Drives</a>
                             </div> <!-- end .col-sm-12  -->  
 
                         </div> <!-- end .row  -->
@@ -538,9 +538,9 @@
                 <div class="row section-heading-wrapper">
 
                     <div class="col-md-12 col-sm-12 text-center no-img-separator">
-                        <h2>CAMPAIGN GALLERY</h2>
+                        <h2>BLOOD DRIVE GALLERY</h2>
                         <span class="heading-separator"></span>
-                        <h4>our prestigious voluntary work on campaigns by the team</h4>
+                        <h4>our prestigious voluntary work on blood drive by the team</h4>
                     </div> <!-- end .col-sm-10  -->                      
 
 
