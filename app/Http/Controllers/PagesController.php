@@ -17,12 +17,14 @@ class PagesController extends Controller
         $donors = count(Donor::all());
         $blood_requests = count(BloodRequest::all());
         $donations = count(Donation::all());
+        $blood_drive = BloodDrive::all();
         return view('index', 
         [
             'com_count' => $community, 
             'donors' => $donors, 
             'blood_requests' => $blood_requests,
-            'donations' => $donations
+            'donations' => $donations,
+            'blood_drive' => $blood_drive
         ]);
     }
 
@@ -32,17 +34,12 @@ class PagesController extends Controller
     }
 
     public function blood() {
-        // $donor = BloodType::orderBy('id')->donor;
-        // return response()->json($donor, 200);
-
         $blood = BloodType::find(3);
         $blood_one = $blood->community->get();
         return response()->json($blood_one, 200);
     }
 
     public function bloodDrive() {
-        // $blood_drive = BloodDrive::orderBy('id')->get();
-        // return response()->json($blood_drive, 200);
         $blood_drive = BloodDrive::all();
         return view('blood-drive',['blood_drive' => $blood_drive]);
     }

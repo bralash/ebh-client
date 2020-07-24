@@ -14,7 +14,6 @@
                             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                                 <img src="images/ebh-logo-footer.png" alt="" />
                             </div> <!--  end col-lg-3-->
-
                             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                                 <p>
                                     We are world largest and trustful blood donation center. We have been working since 1973 with a prestigious vision to helping patient to provide blood.

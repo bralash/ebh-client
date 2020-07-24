@@ -51,13 +51,17 @@
                                         </a>
                                     </figure>
                                     <div class="event-info"> 
-                                        <a class="event-date" href="#"><i class="fa fa-calendar-o"></i> {{date('d-m-Y', strtotime($drive->scheduled_at))}}</a>
+                                        <a class="event-date" href="#"><i class="fa fa-calendar-o"></i> {{date('d F, Y', strtotime($drive->scheduled_at))}}</a>
                                         <h4>
                                             <a href="#">{{$drive->event_name}}</a>
                                         </h4>
-                                        <div class="event-exceprt">Lorem ipsum dolor sit amet turadipi scing elit lobort issim consecte dign pharetra mauris.</div>
+                                    <div class="event-exceprt">{{$drive->description}}</div>
                                         <div class="event-time">
-                                            <a href="#"><i class="fa fa-clock-o"></i> 10.00 - 3.00</a>
+                                            @php
+                                                $datetime = explode(" ",$drive->scheduled_at);
+                                                $time = $datetime[1];
+                                            @endphp
+                                            <a href="#"><i class="fa fa-clock-o"></i>{{date("h:ia",strtotime($time))}}</a>
                                             <a href="#"> <i class="fa fa-map-marker"></i> {{$drive->community->name}}</a>
                                         </div>
                                     </div>
@@ -66,6 +70,7 @@
                         @endforeach
                     </div>
                 @endforeach
+                
                 
                 
 

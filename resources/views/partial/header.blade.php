@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="description" content="Emergency Blood Hub for blood donation">
         <meta name="author" content="xenioushk">
-        <link rel="shortcut icon" href="images/favicon.png" />
+        <link rel="shortcut icon" href="images/ebh-logo-footer.png" />
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="logo" href="index.html"><img alt="" src="images/ebh_logo.png"></a>
+                            <a class="logo" href="/"><img alt="" src="images/ebh-logo.png"></a>
                         </div>
 
                         <div class="navbar-collapse collapse">
