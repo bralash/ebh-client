@@ -44,4 +44,8 @@ class PagesController extends Controller
         return view('blood-drive',['blood_drive' => $blood_drive]);
     }
 
+    public function contact() {
+        return view('contact');
+    }
+
 }

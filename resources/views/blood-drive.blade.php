@@ -62,7 +62,7 @@
                                                 $time = $datetime[1];
                                             @endphp
                                             <a href="#"><i class="fa fa-clock-o"></i>{{date("h:ia",strtotime($time))}}</a>
-                                            <a href="#"> <i class="fa fa-map-marker"></i> {{$drive->community->name}}</a>
+                                            <a href="#"> <i class="fa fa-map-marker"></i> {{$drive->location}}, {{$drive->community->name}}</a>
                                         </div>
                                     </div>
                                 </div>

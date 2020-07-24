@@ -3,7 +3,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
         <meta charset="utf-8">
-        <title>Emergency Blood Hub - Welcome</title>
+<title>Emergency Blood Hub - {{$title}}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="description" content="Emergency Blood Hub for blood donation">
         <meta name="author" content="xenioushk">
