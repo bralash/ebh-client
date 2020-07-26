@@ -582,7 +582,7 @@ a.btn-load-more:hover {
   line-height: 32px;
   font-size: 18px;
   font-weight: 600;
-  padding: 16px 36px;
+  /* padding: 16px 36px; */
   position: relative;
   text-transform: uppercase;
   -webkit-transition: 'all' '0.5s' ease-out;
@@ -594,7 +594,7 @@ a.btn-load-more:hover {
   overflow: hidden;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
-  border-radius: 0px;
+  border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;

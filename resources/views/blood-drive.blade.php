@@ -33,7 +33,7 @@
                 <div class="row section-heading-wrapper">
 
                     <div class="col-md-12 col-sm-12 text-left no-img-separator">
-                        <h2>ALL CAMPAIGNS</h2>
+                        <h2>ALL BLOOD DRIVES</h2>
                         <span class="heading-separator heading-separator-horizontal"></span>
                         <h4>Encourage new donors to join and continue to give blood. We have total sixty thousands donor centers and visit thousands of other venues on various occasions. </h4>
                     </div> <!-- end .col-sm-12  -->                       

@@ -55,16 +55,11 @@
 
                             <div class="about-details"> 
 
-                                <p>Blood Buddies is for public donation center with blood donation members in the changing health care system.</p>
+                                <p>The Emergency Blood Hub is a very handy application with a very important goal. 
 
-
-                                <ul class="custom-bullet-list">
-                                    <li>Specialist blood donors and clinical supervision.</li>
-                                    <li>Increasing communication with our members.</li>
-                                    <li>High quality assessment, diagnosis and treatment.</li>
-                                    <li>Examine critically to ensure alignment.</li>
-                                    <li>The extra care of a multi-disciplinary team.</li>
-                                </ul>
+                                    It aim at providing a critical blood donor to those in life or death situations. 
+                                    
+                                    It is created with the sole purpose of saving lives.</p>
 
                             </div> <!--  end .about-details -->  
 
@@ -115,50 +110,45 @@
                             <div class="col-md-12 col-sm-12">
 
                                 <div class="testimony-layout-1">
-                                    <h3 class="people-quote">Donor Opinion</h3>
+                                    <h3 class="people-quote">Find Donor</h3>
                                     <p class="testimony-text">
-                                        I proudly donate blood on a regular basis because it gives others something they desperately need to survive. Just knowing I can make a difference in someone else's life makes me feel great!      
+                                        In need of blood, find a donor with the blood group you need who is in your community      
                                     </p>
                                     
-                                    <img src="images/user_1.jpg" alt="" />
-                                    <h6>Brandon Munson</h6>
-                                    <span>CTO, Fulcrum Design, USA</span>
+                                    <form class="appoinment-form" method="POST" action="{{URL::to('/find-donors')}}"> 
+                                        {{ csrf_field() }}
+                                        <div class="form-group col-md-6">
+                                            <label for="">Blood Type</label>
+                                            <div class="select-style">    
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">All blood type</option>
+                                                    @foreach ($blood_type as $type)
+                                                        <option value="{{$type->code}}">{{$type->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="">Communities</label>
+                                            <div class="select-style">    
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">All Communities</option>
+                                                    @foreach ($communities as $community)
+                                                        <option value="{{$community->id}}">{{$community->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                            <button id="btn_submit" class="btn btn-theme" type="submit">Find Donors</button>
+                                        </div>
+                                    </form>
 
                                 </div> <!-- end .testimony-layout-1  -->
 
                             </div> <!--  end col-md-10  -->
-
-                            <div class="col-md-12 col-sm-12">
-
-                                <div class="testimony-layout-1">
-                                    <h3 class="people-quote">Donor Opinion</h3>
-                                    <p class="testimony-text">
-                                        I have been a donor since high school. Although I have not been a donor every year, I always want to give to the human race. I love to help others! Moreover it gives a real peace in my mind.   
-                                    </p>
-
-                                    <img src="images/user_2.jpg" alt="" />
-                                    <h6>Munson Brandon</h6>
-                                    <span>CTO, Fulcrum Design, USA</span>
-
-                                </div> <!-- end .testimony-layout-1  -->
-
-                            </div> <!--  end col-md-10  -->
-
-                            <div class="col-md-12 col-sm-12">
-
-                                <div class="testimony-layout-1">
-                                    <h3 class="people-quote">Recipient Opinion</h3>
-                                    <p class="testimony-text">
-                                        I wish I could tell you my donor how grateful I am for your selfless act.You gave me new life. We may be coworkers or schoolmates or just two in the same community.I'm very grateful to you.  
-                                    </p>
-
-                                    <img src="images/user_3.jpg" alt="" />
-                                    <h6>Logan Munson</h6>
-                                    <span>CTO, Fulcrum Design, USA</span>
-
-                                </div> <!-- end .testimony-layout-1  -->
-
-                            </div> <!--  end col-md-10  --> 
 
                         </div>  <!--  end .row  -->   
                     </div>
@@ -354,7 +344,7 @@
                         <div class="counter-block-1 text-center">
 
                             <i class="fa fa-users icon"></i>
-                            <span class="counter">{{$com_count}}</span>                             
+                            <span class="counter">{{count($communities)}}</span>                             
                             <h4 class="text-capitalize">Communities</h4>
 
                         </div>
