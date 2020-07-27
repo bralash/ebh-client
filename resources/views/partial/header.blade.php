@@ -48,12 +48,15 @@
 
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="/">Home</a></li>                                
+                                <li><a href="/">Home</a></li> 
+                                
+                                <li><a href="find-donors" title="Find Donors">Find Donors</a></li>
+                                
+                                <li><a href="blood-drive" title="Blood Drives">Blood Drives</a></li>
+
                                 <li><a href="about" title="About Us">About Us</a></li>
 
-                                <li><a href="blood-drive">Blood Drives</a></li>
-
-                                <li><a href="contact">Contact Us</a></li>
+                                <li><a href="contact" title="Contact Us">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>

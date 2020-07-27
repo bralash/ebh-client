@@ -15,3 +15,5 @@ Route::get('/', 'PagesController@index');
 Route::get('donor', 'PagesController@donate');
 Route::get('blood-drive', 'PagesController@bloodDrive');
 Route::get('contact', 'PagesController@contact');
+Route::get('about', 'PagesController@about');
+Route::get('find-donors', 'PagesController@donors');

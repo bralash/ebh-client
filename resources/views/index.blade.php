@@ -356,7 +356,7 @@
                         <div class="counter-block-1 text-center">
 
                             <i class="fa fa-heart-o icon"></i>
-                            <span class="counter">{{$donations}}</span>                            
+                            <span class="counter">{{count($donations)}}</span>                            
                             <h4 class="text-capitalize">Donations</h4>
 
                         </div>
@@ -368,7 +368,7 @@
                         <div class="counter-block-1 text-center">
 
                             <i class="fa fa-heartbeat icon"></i>
-                            <span class="counter">{{$donors}}</span>                            
+                            <span class="counter">{{count($donors)}}</span>                            
                             <h4 class="text-capitalize">Donors</h4>
 
                         </div>
@@ -380,7 +380,7 @@
                         <div class="counter-block-1 text-center">
 
                             <i class="fa fa-stethoscope icon"></i>
-                            <span class="counter">{{$blood_requests}}</span>                            
+                            <span class="counter">{{count($blood_requests)}}</span>                            
                             <h4 class="text-capitalize">Blood Requests</h4>
 
                         </div>

@@ -1,4 +1,4 @@
-@include('partial.header',['title' =>'Contact Us'])
+@include('partial.header',['title' => 'Find Donors'])
 
     <!--  PAGE HEADING -->
 
@@ -11,7 +11,7 @@
                 <div class="col-sm-12 text-center">
 
                     <h3>
-                        Contact Us
+                        Find Donors
                     </h3>
 
                 </div>
