@@ -86,19 +86,6 @@
 
         <section class="section-content-block section-custom-bg" data-bg_img='images/testimony_feat_bg.jpg' data-bg_size='cover' data-bg_position='top center' data-bg_opacity="0">
             
-            <div class="container margin-top-80">
-                <div class="row section-heading-wrapper-alt">
-
-                    <div class="col-md-12 col-sm-12 text-center no-img-separator">
-                        <h4>Awesome Words From Members</h4>
-                        <span class="heading-separator heading-separator-horizontal"></span>
-                        <h2 class="extra-large">JOIN WITH US AND SAVE LIFE</h2>
-
-                    </div> <!-- end .col-sm-10  --> 
-
-                </div>
-            </div>
-
             <div class="container theme-custom-box-shadow  section-pure-white-bg margin-top-48 margin-bottom-48 wow fadeInUp">
                 
                 <div class="row">
