@@ -51,7 +51,15 @@ class PagesController extends Controller
     }
 
     public function donors() {
-        return view('find-donors');
+        $blood_type = BloodType::all();
+        $communities = Community::all();
+        $donors = Donor::all();
+        return view('find-donors',
+        [
+            'communities' => $communities, 
+            'blood_type' => $blood_type,
+            'donors' => $donors
+        ]);
     }
 
     public function about() {

@@ -384,19 +384,6 @@
 
         <section class="section-content-block section-custom-bg" data-bg_img='images/team_feat_bg.jpg' data-bg_size='cover' data-bg_position='top center' data-bg_opacity="0">
             
-            <div class="container margin-top-80">
-                <div class="row section-heading-wrapper-alt">
-
-                    <div class="col-md-12 col-sm-12 text-center no-img-separator">
-                        <h4>OUR VOLUNTEERS</h4>
-                        <span class="heading-separator heading-separator-horizontal"></span>
-                        <h2 class="extra-large">The volunteers who give their time and talents help to fulfill our mission.</h2>
-
-                    </div> <!-- end .col-sm-10  --> 
-
-                </div>
-            </div>
-
             <div class="container margin-top-48 margin-bottom-48 wow fadeInLeft">
                 
                 <div class="row">

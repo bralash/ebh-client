@@ -2950,7 +2950,7 @@ a.btn-cta-3:hover {
   color: #999;
   padding: 6px 12px;
   height: 42px;
-  line-height: 42px;
+  /* line-height: 42px; */
   margin-bottom: 24px;
 }
 .appoinment-form .select-style select.form-control:focus {
@@ -3656,7 +3656,7 @@ ul.pagination li a {
   margin: 0 2px;
 }
 ul.pagination li a:hover {
-  backgroud: #000 !important;
+  background: #000 !important;
 }
 ul.pagination li a.current {
   background: #EF3D32;
@@ -6365,4 +6365,36 @@ span.border-bold-dashed {
   }
 }
 
+.clearfix {
+  overflow: auto;
+}
+.donor-list {
+  border-top: 1px solid #eeccee;
+  padding-top: 10px;
+}
+.donor {
+  background: #f3f3f3;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.donor .info h4 {
+  margin-bottom: 0px;
+}
+.donor-body .avatar {
+  float: left;
+  border: 1px solid #eeccee;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: tomato;
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+.avatar .substr {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  line-height: 60px;
+}
 /*# sourceMappingURL=styles.css.map */
