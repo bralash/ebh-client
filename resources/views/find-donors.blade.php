@@ -25,38 +25,41 @@
     <section class="section-content-block">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 offset-md-3"></div>
-                <div class="col-md-6">
-                    
-                    
-                    <div class="donor-list">
-                        @foreach ($donors as $donor)
+                <div class="donor-list">
+                    @foreach ($donors->chunk(3) as $chunk)
+                        @foreach ($chunk as $donor)
                             @php
-                                $fullname = ucfirst($donor->firstname) . " " . ucfirst($donor->lastname);
+                                $fullname = ucfirst($donor->firstname) . " " . ucfirst($donor->lastname)
                             @endphp
-                        <div class="donor">
-                            <div class="donor-body clearfix">
-                                <div class="avatar">
-                                    <div class="substr">
-                                        {{substr($donor->firstname, 0, 1)}}{{substr($donor->lastname, 0, 1)}}
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <h4>{{$fullname}}</h4>
-                                    <div>
-                                        <i class="fa fa-map-marker"></i>
-                                        {{$donor->community->name}} <br /> 
-                                        <i class="fa fa-phone"></i>
-                                        <a href="tel: {{$donor->phone}}">{{$donor->phone}}</a>
+                            <div class="col-md-4">
+                                <div class="donor">
+                                    <div class="donor-body clearfix">
+                                        <div class="avatar">
+                                            <div class="substr">
+                                                {{ucfirst(substr($donor->firstname, 0, 1))}}{{ucfirst(substr($donor->lastname, 0, 1))}}
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <h4>{{$fullname}}</h4>
+                                            <div>
+                                                <i class="fa fa-map-marker"></i>
+                                                {{$donor->community->name}} <br /> 
+                                                <i class="fa fa-phone"></i>
+                                                <a href="tel: {{$donor->phone}}">{{$donor->phone}}</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
-                    </div>
+                    @endforeach
+                    
                 </div>
+                
             </div>
+            {{$donors->render()}}
         </div>
     </section>
+
 
 @include('partial.footer')

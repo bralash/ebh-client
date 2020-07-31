@@ -6393,8 +6393,21 @@ span.border-bold-dashed {
 }
 .avatar .substr {
   color: #fff;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   line-height: 60px;
+}
+.pagination > .active > a,
+.pagination > .active > a:focus, 
+.pagination > .active > a:hover, 
+.pagination > .active > span, 
+.pagination > .active > span:focus, 
+.pagination > .active > span:hover {
+  border-radius: 50px;
+  background-color: tomato;
+  border-color: tomato;
+}
+ul.pagination li a:hover {
+  background-color: #fff !important;
 }
 /*# sourceMappingURL=styles.css.map */

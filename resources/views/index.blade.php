@@ -379,121 +379,6 @@
             </div> <!--  end .container -->
 
         </section>  <!--  end .appointment-section  -->
-        
-        <!-- SECTION TEAM   -->
-
-        <section class="section-content-block section-custom-bg" data-bg_img='images/team_feat_bg.jpg' data-bg_size='cover' data-bg_position='top center' data-bg_opacity="0">
-            
-            <div class="container margin-top-48 margin-bottom-48 wow fadeInLeft">
-                
-                <div class="row">
-
-                        <div class="col-md-4 col-sm-12">
-
-                            <div class="team-layout-1 theme-custom-box-shadow theme-custom-box-animation">
-
-                                <figure class="team-member">
-                                    <a href="#" title="ALEXANDER GARY">
-                                        <img src="images/team_9.jpg" alt="ALEXANDER GARY"/>
-                                    </a>
-
-                                </figure> <!-- end. team-member  -->
-
-                                <article class="team-info">
-                                    <h3>ALEXANDER GARY</h3>                                   
-                                    <h4>Co-Founder</h4>
-                                </article>
-
-                                <div class="team-content">
-
-                                    <div class="team-social-share text-center clearfix">
-                                        <a class="fa fa-facebook rectangle" href="#" title="Facebook"></a>
-                                        <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                        <a class="fa fa-google-plus rectangle" href="#" title="Google Plus"></a>
-                                        <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
-                                    </div> <!-- end .author-social-box  -->
-
-                                </div>                             
-
-                            </div> <!--  end team-layout-1 -->
-
-                        </div> <!--  end .col-md-4 col-sm-12  -->
-
-                        <div class="col-md-4 col-sm-12">
-
-                            <div class="team-layout-1 theme-custom-box-shadow theme-custom-box-animation">
-
-                                <figure class="team-member">
-                                    <a href="#" title="MELISSA MUNOZ">
-                                        <img src="images/team_6.jpg" alt="MELISSA MUNOZ" />
-                                    </a>
-
-                                </figure> <!-- end. team-member  -->
-
-                                <article class="team-info">
-                                    <h3>MELISSA MUNOZ</h3>                                   
-                                    <h4>Founder</h4>
-                                </article>
-
-                                <div class="team-content">
-
-                                    <div class="team-social-share text-center clearfix">
-                                        <a class="fa fa-facebook rectangle" href="#" title="Facebook"></a>
-                                        <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                        <a class="fa fa-google-plus rectangle" href="#" title="Google Plus"></a>
-                                        <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
-                                    </div> <!-- end .author-social-box  -->
-
-                                </div>                             
-
-                            </div> <!--  end team layout-1 -->
-
-                        </div> <!--  end .col-md-4 col-sm-12  -->
-
-                        <div class="col-md-4 col-sm-12">
-
-                            <div class="team-layout-1 theme-custom-box-shadow theme-custom-box-animation">
-
-                                <figure class="team-member">
-                                    <a href="#" title="JOHN ABRAHAM">
-                                        <img src="images/team_7.jpg" alt="JOHN ABRAHAM" />
-                                    </a>                               
-
-                                </figure> <!-- end. team-member  -->
-
-                                <article class="team-info">
-                                    <h3>JOHN ABRAHAM</h3>                                   
-                                    <h4>Manager</h4>
-                                </article>
-                                <div class="team-content">
-
-                                    <div class="team-social-share text-center clearfix">
-                                        <a class="fa fa-facebook rectangle" href="#" title="Facebook"></a>
-                                        <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                        <a class="fa fa-google-plus rectangle" href="#" title="Google Plus"></a>
-                                        <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
-                                    </div> <!-- end .author-social-box  -->
-
-                                </div>                             
-
-                            </div> <!--  end team-layout-1 -->
-
-                        </div> <!--  end .col-md-4 col-sm-12  -->  
-
-
-                    </div> <!-- end .row  --> 
-                    
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <a class="btn btn-theme margin-top-24" href="#">Become A Volunteer</a>
-                        </div>
-                    </div>
-
-            </div> <!-- end .container  -->
-
-        </section>
-
-        <!--  SECTION GALLERY  -->
 
         <section class="section-content-block section-pure-white-bg">
 
@@ -502,9 +387,9 @@
                 <div class="row section-heading-wrapper">
 
                     <div class="col-md-12 col-sm-12 text-center no-img-separator">
-                        <h2>BLOOD DRIVE GALLERY</h2>
+                        <h2>BLOOD REQUESTS</h2>
                         <span class="heading-separator"></span>
-                        <h4>our prestigious voluntary work on blood drive by the team</h4>
+                        <h4>Blood requests you might be able to help with</h4>
                     </div> <!-- end .col-sm-10  -->                      
 
 
@@ -512,107 +397,45 @@
 
             </div> <!--  end .container -->
 
-            <div class="container wow fadeInUp">
+            <div class="container">
+                <div class="row">
+                    <div class="donor-list">
+                        @foreach ($requests->chunk(3) as $chunk)
+                            @foreach ($chunk as $request)
+                                <div class="col-md-4">
+                                    <div class="donor">
+                                        <div class="donor-body clearfix">
+                                            <div class="avatar">
+                                                <div class="substr">
+                                                    {{$request->bloodType->name}}
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <h4>{{$request->user->name}}</h4>
+                                                <div>
+                                                    <i class="fa fa-map-marker"></i>
+                                                    {{$request->community->name}} <br /> 
+                                                    <i class="fa fa-phone"></i>
+                                                    <a href="tel: {{$request->requester_phone}}">{{$request->requester_phone}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endforeach
+                        {{$requests->render()}}
+                    </div>
+                </div>
+            </div>
 
-                <div class="row no-padding-gallery">
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 gallery-container">
-
-                        <a class="gallery-light-box"  data-gall="myGallery" href="images/gallery_1.jpg">
-
-                            <figure class="gallery-img">
-
-                                <img src="images/gallery_1.jpg" alt="gallery image" />
-
-                            </figure> <!-- end .gallery-img  -->
-
-                        </a>
-
-                    </div><!-- end .col-sm-3  -->
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 gallery-container">
-
-                        <a class="gallery-light-box" data-gall="myGallery" href="images/gallery_2.jpg">
-
-                            <figure class="gallery-img">
-
-                                <img src="images/gallery_2.jpg" alt="gallery image" />
-
-                            </figure> <!-- end .gallery-img  -->
-
-                        </a> <!-- end .gallery-light-box  -->
-
-                    </div><!-- end .col-sm-3  -->
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 gallery-container">
-
-                        <a class="gallery-light-box"  data-gall="myGallery" href="images/gallery_3.jpg">
-
-                            <figure class="gallery-img">
-
-                                <img src="images/gallery_3.jpg" alt="gallery image" />
-
-                            </figure> <!-- end .gallery-img  -->
-
-                        </a>
-
-                    </div><!-- end .col-sm-3  -->
-
-                </div> <!-- end .row  -->
-
-                <div class="row no-padding-gallery">
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 gallery-container">
-
-                        <a class="gallery-light-box" data-gall="myGallery" href="images/gallery_4.jpg">
-
-                            <figure class="gallery-img">
-
-                                <img src="images/gallery_4.jpg" alt="gallery image" />
-
-                            </figure> <!-- end .gallery-img  -->
-
-                        </a> <!-- end .gallery-light-box  -->
-
-                    </div><!-- end .col-sm-3  -->
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 gallery-container">
-
-                        <a class="gallery-light-box"  data-gall="myGallery" href="images/gallery_5.jpg">
-
-                            <figure class="gallery-img">
-
-                                <img src="images/gallery_5.jpg" alt="gallery image" />
-
-                            </figure> <!-- end .gallery-img  -->
-
-                        </a>
-
-                    </div><!-- end .col-sm-3  -->
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 gallery-container">
-
-                        <a class="gallery-light-box" data-gall="myGallery" href="images/gallery_6.jpg">
-
-                            <figure class="gallery-img">
-
-                                <img src="images/gallery_6.jpg" alt="gallery image" />
-
-                            </figure> <!-- end .gallery-img  -->
-
-                        </a> <!-- end .gallery-light-box  -->
-
-                    </div><!-- end .col-sm-3  -->
-
-                </div> <!-- end .row  -->
-
-            </div><!-- end .container-fluid  -->
+            
 
         </section> <!-- end .section-content-block  -->
 
         <!-- HIGHLIGHT CTA  -->  
         
-        <section class="padding-bottom-100 padding-top-0">
+        {{-- <section class="padding-bottom-100 padding-top-0">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -628,7 +451,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!-- START FOOTER  -->
 

@@ -16,6 +16,7 @@ class PagesController extends Controller
         $communities = Community::all();
         $donors = Donor::all();
         $blood_requests = BloodRequest::all();
+        $requests = BloodRequest::paginate(15);
         $donations = Donation::all();
         $blood_drive = BloodDrive::all();
         $blood_type = BloodType::all();
@@ -24,6 +25,7 @@ class PagesController extends Controller
             'communities' => $communities, 
             'donors' => $donors, 
             'blood_requests' => $blood_requests,
+            'requests' => $requests,
             'donations' => $donations,
             'blood_drive' => $blood_drive,
             'blood_type' => $blood_type
@@ -53,7 +55,7 @@ class PagesController extends Controller
     public function donors() {
         $blood_type = BloodType::all();
         $communities = Community::all();
-        $donors = Donor::all();
+        $donors = Donor::paginate(9);
         return view('find-donors',
         [
             'communities' => $communities, 
