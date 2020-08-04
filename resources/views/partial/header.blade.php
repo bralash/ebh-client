@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="description" content="Emergency Blood Hub for blood donation">
         <meta name="author" content="xenioushk">
-        <link rel="shortcut icon" href="images/ebh-logo-footer.png" />
+        <link rel="shortcut icon" href="{{URL::asset('images/ebh-logo-footer.png')}}" />
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -43,20 +43,22 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="logo" href="/"><img alt="" src="images/ebh-logo.png"></a>
+                            <a class="logo" href="/"><img alt="" src="{{URL::asset('images/ebh-logo.png')}}"></a>
                         </div>
 
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="/">Home</a></li> 
                                 
-                                <li><a href="find-donors" title="Find Donors">Find Donors</a></li>
+                                <li><a href="{{URL::to('find-donors')}}" title="Find Donors">Find Donors</a></li>
                                 
-                                <li><a href="blood-drive" title="Blood Drives">Blood Drives</a></li>
+                                <li><a href="{{URL::to('blood-drive')}}" title="Blood Drives">Blood Drives</a></li>
 
-                                <li><a href="about" title="About Us">About Us</a></li>
+                                <li><a href="{{URL::to('about')}}" title="About Us">About Us</a></li>
 
-                                <li><a href="contact" title="Contact Us">Contact Us</a></li>
+                                <li><a href="{{URL::to('contact')}}" title="Contact Us">Contact Us</a></li>
+
+                                <li><a href="{{URL::to('guidelines')}}" title="Contact Us">Guidelines</a></li>
                             </ul>
                         </div>
                     </div>

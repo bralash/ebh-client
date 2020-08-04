@@ -33,8 +33,10 @@ class PagesController extends Controller
     }
 
     public function donate() {
-        $donor = Donor::orderBy('id')->get();
-        return response()->json($donor, 200);
+        // $donor = Donor::orderBy('id')->get();
+        // return response()->json($donor, 200);
+
+        return view('response');
     }
 
     public function blood() {
@@ -64,6 +66,29 @@ class PagesController extends Controller
         ]);
     }
 
+    public function addDonor(Request $request) {
+        $donor = new Donor;
+        $result = "Ooops. Looks like you have already requested to be a donor.";
+        $checkDonor = Donor::where('phone', $request->phone)->first();
+        if($checkDonor === null) {
+            $donor->firstname = $request->firstname;
+            $donor->lastname = $request->lastname;
+            $donor->phone = $request->phone;
+            $donor->community_id = $request->community_id;
+            $donor->date_of_birth = $request->date_of_birth;
+            $donor->blood_type_id = $request->blood_type_id;
+            $donor->badge_id = 1;
+            $donor->status = 0;
+
+            $donor->save();
+
+            $result = "Thanks for your request. You will be added to our donor list shortly";
+
+            return view('response',['result' => $result]);
+        } 
+        return view('response',['result' => $result]);
+    }
+
     public function about() {
         $communities = Community::all();
         $donors = Donor::all();
@@ -80,6 +105,10 @@ class PagesController extends Controller
             'blood_drive' => $blood_drive,
             'blood_type' => $blood_type
         ]);
+    }
+
+    public function guide() {
+        return view('guide');
     }
 
 }

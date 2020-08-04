@@ -231,7 +231,7 @@
         
         <!--  SECTION APPOINTMENT BOX -->
         
-        <section class="section-content-block section-custom-bg section-custom-bg-extra-padding" data-bg_img='images/appointment_female_bg.jpg' data-bg_color='#000000' data-bg_opacity='0.1'>
+        <section id="section-custom-bg" class="section-content-block section-custom-bg section-custom-bg-extra-padding" data-bg_img={{URL::asset('images/testimony_feat_bg.jpg')}} data-bg_color='#000000' data-bg_opacity='0.1'>
 
             <div class="container">
                 <div class="custom-empty-space" data-height="160px" data-class="col-sm-hidden"></div>
@@ -280,38 +280,41 @@
 
                         <div class="appointment-form-wrapper theme-custom-box-shadow text-center clearfix wow zoomIn">
                             <h3 class="join-heading join-heading-alt">Request to be a donor</h3>
-                            <form class="appoinment-form"> 
+                            <form class="appoinment-form" method="POST" action="{{URL::to('donors/add')}}"> 
+                                {{ csrf_field() }}
                                 <div class="form-group col-md-6">
-                                    <input id="your_name" class="form-control" placeholder="Name" type="text">
+                                    <input id="your_name" name="firstname" class="form-control" placeholder="Firstname" type="text" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input id="your_email" class="form-control" placeholder="Email" type="email">
+                                    <input id="your_email" name="lastname" class="form-control" placeholder="Surname" type="text" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input id="your_phone" class="form-control" placeholder="Phone" type="text">
+                                    <input id="your_phone" name="phone" class="form-control" placeholder="Phone" type="text" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <div class="select-style">                                    
-                                        <select class="form-control" name="your_center">
-                                            <option>Donation Center</option>
-                                            <option>Los Angles</option>
-                                            <option>California</option>
+                                    <input id="your_phone" name="date_of_birth" class="form-control datepicker" placeholder="DOB(YYYY-MM-DD)" type="text" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="select-style">    
+                                        <select name="blood_type_id" id="" class="form-control" required>
+                                            <option value="">Blood type</option>
+                                            @foreach ($blood_type as $type)
+                                                <option value="{{$type->id}}">{{$type->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <input id="your_date" class="form-control" placeholder="Date" type="text">
-                                </div>
-
-
-                                <div class="form-group col-md-6">
-                                    <input id="your_time" class="form-control" placeholder="Time" type="text">
-                                </div>
-
-                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <textarea id="textarea_message" class="form-control" rows="4" placeholder="Your Message..."></textarea>
-                                </div>         
+                                    <div class="select-style">                                    
+                                        <select name="community_id" id="" class="form-control" required>
+                                            <option value="">Community</option>
+                                            @foreach ($communities as $community)
+                                                <option value="{{$community->id}}">{{$community->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>       
 
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <button id="btn_submit" class="btn btn-theme" type="submit">Send Request</button>

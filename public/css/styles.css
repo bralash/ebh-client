@@ -6422,4 +6422,8 @@ ul.pagination li a:hover {
   }
 
 }
+
+#section-custom-bg {
+  background-position: center 0px !important;
+}
 /*# sourceMappingURL=styles.css.map */

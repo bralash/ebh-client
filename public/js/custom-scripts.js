@@ -15,6 +15,8 @@ jQuery(function ($) {
         rtl_status = true;
     }
 
+    
+
     jQuery.fn.center = function (parent) {
         if (parent) {
             parent = this.parent();
