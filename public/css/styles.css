@@ -6410,4 +6410,16 @@ span.border-bold-dashed {
 ul.pagination li a:hover {
   background-color: #fff !important;
 }
+
+@media only screen and (max-width: 350px) {
+  .donor .info h4 {
+    font-size: 20px;
+  }
+
+  .donor-body .avatar {
+    margin-right: 15px;
+    margin-bottom: 50px;
+  }
+
+}
 /*# sourceMappingURL=styles.css.map */

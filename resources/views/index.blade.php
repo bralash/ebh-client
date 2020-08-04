@@ -279,7 +279,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin-top-appointment-reverse"> 
 
                         <div class="appointment-form-wrapper theme-custom-box-shadow text-center clearfix wow zoomIn">
-                            <h3 class="join-heading join-heading-alt">Request Appointment</h3>
+                            <h3 class="join-heading join-heading-alt">Request to be a donor</h3>
                             <form class="appoinment-form"> 
                                 <div class="form-group col-md-6">
                                     <input id="your_name" class="form-control" placeholder="Name" type="text">
@@ -314,7 +314,7 @@
                                 </div>         
 
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <button id="btn_submit" class="btn btn-theme" type="submit">Get Appointment</button>
+                                    <button id="btn_submit" class="btn btn-theme" type="submit">Send Request</button>
                                 </div>
 
                             </form>

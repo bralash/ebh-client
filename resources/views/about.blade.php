@@ -60,11 +60,7 @@
                                 in the phone book that also have the application installed. In this way they can request for a
                                 blood donor from their known links.
                             </p>
-                            <p>
-                                Our team would only consider this initiative a success if it manages to deliver help to someone when
-                                they might need it the most.
-                            </p>
-
+                            
                         </div> <!--  end .about-details -->  
 
                     </div>
@@ -147,7 +143,10 @@
 
                 <div class="col-md-12 col-sm-12 text-center">
                     <h2>OUR ACHIEVEMENTS</h2>   
-                    <h4>We have been working since 1973 with a prestigious vision to helping patient to provide blood.</h4>
+                    <h4>
+                        Our team would only consider this initiative a success if it manages to deliver help to someone when
+                        they might need it the most.
+                    </h4>
                 </div> <!-- end .col-sm-12  --> 
                 
             </div>
