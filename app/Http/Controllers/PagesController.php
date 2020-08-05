@@ -111,4 +111,40 @@ class PagesController extends Controller
         return view('guide');
     }
 
+    public function searchDonor(Request $request) {
+        $blood_type = BloodType::all();
+        $communities = Community::all();
+        $blood_type_id = $request->blood_type_id;
+        $community_id = $request->community_id;
+
+        $donors = Donor::all();
+
+        // if($blood_type_id != "*") {
+        //     $donors->where('blood_type_id','=',$blood_type_id);
+        // }
+
+        // if($community_id != "*") {
+        //     $donors->where('community_id','=',$community_id);
+        // }
+
+        // if(!empty($donors)) {
+        //     $donors->paginate(9);
+        // } else {
+        //     $donors = null;
+        // }
+        
+
+        $donors = Donor::where('blood_type_id','=',$blood_type_id)->where('community_id','=',$community_id)->paginate(9);
+
+        // $donors = Donor::paginate(9);
+        return view('find-donors',
+        [
+            'communities' => $communities, 
+            'blood_type' => $blood_type,
+            'donors' => $donors
+        ]);
+
+        // dd($donor);
+    }
+
 }

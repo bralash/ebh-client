@@ -19,3 +19,4 @@ Route::get('about', 'PagesController@about');
 Route::get('find-donors', 'PagesController@donors');
 Route::post('donors/add', 'PagesController@addDonor');
 Route::get('guidelines', 'PagesController@guide');
+Route::post('donor/search', 'PagesController@searchDonor');

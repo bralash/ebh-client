@@ -102,15 +102,15 @@
                                         In need of blood, find a donor with the blood group you need who is in your community      
                                     </p>
                                     
-                                    <form class="appoinment-form" method="POST" action="{{URL::to('/find-donors')}}"> 
+                                    <form class="appoinment-form" method="POST" action="{{URL::to('/donor/search')}}"> 
                                         {{ csrf_field() }}
                                         <div class="form-group col-md-6">
                                             <label for="">Blood Type</label>
                                             <div class="select-style">    
-                                                <select name="" id="" class="form-control">
-                                                    <option value="">All blood type</option>
+                                                <select name="blood_type_id" id="" class="form-control">
+                                                    <option value="*">All blood type</option>
                                                     @foreach ($blood_type as $type)
-                                                        <option value="{{$type->code}}">{{$type->name}}</option>
+                                                        <option value="{{$type->id}}">{{$type->name}}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -119,8 +119,8 @@
                                         <div class="form-group col-md-6">
                                             <label for="">Communities</label>
                                             <div class="select-style">    
-                                                <select name="" id="" class="form-control">
-                                                    <option value="">All Communities</option>
+                                                <select name="community_id" id="" class="form-control">
+                                                    <option value="*">All Communities</option>
                                                     @foreach ($communities as $community)
                                                         <option value="{{$community->id}}">{{$community->name}}</option>
                                                     @endforeach
